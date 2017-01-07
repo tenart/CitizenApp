@@ -1,0 +1,402 @@
+body {
+    background: #fff;
+}
+
+p, button {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.1;
+    font-size: 18px;
+    z-index: 2;
+    position: relative;
+    background: transparent;
+}
+
+hr {
+    border: none;
+    height: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 15px 0;
+    z-index: 2;
+    position: relative;
+}
+
+/*338d59*/
+
+.inline {
+    display: inline-block;
+}
+
+.right {
+    float: right;
+}
+
+#status_bar {
+    height: 20px;
+    width: 100%;
+}
+
+#top_readout {
+    background-color: #338d59;
+    color: white;    
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    background: #338d59 url(../images/circle.png) no-repeat center top;
+    background-size: 0%;
+    padding-top: 
+}
+
+#top_readout #padding {
+    padding: 20px;
+}
+
+
+#bg_number {
+    position: absolute;
+    font-size: 200px;
+    height: 200px;
+    width: 100%;
+    margin-top: -193px;
+    z-index: 1;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.1);
+    padding: 1;
+}
+
+#icon_tray {
+    font-size: 0;
+    z-index: 2;
+    position: relative;
+    height: 30px;
+    margin: 20px 35px 0;
+}
+
+#icon_tray button {;
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    position: absolute;
+    margin-left: -15px;
+}
+
+#icon_tray button:nth-child(1) {
+    left: 0%;
+} 
+
+#icon_tray button:nth-child(2) {
+    left: 25%;
+} 
+
+#icon_tray button:nth-child(3) {
+    left: 50%;
+} 
+
+#icon_tray button:nth-child(4) {
+    left: 75%;
+} 
+
+#icon_tray button:nth-child(5) {
+    left: 100%;
+} 
+
+#settings {
+    background: url(../images/Settings%20Filled-100.png) center center no-repeat;
+    opacity: 0.4;
+}
+
+#back {
+    background: url(../images/Back-Filled-104.png) center center no-repeat;
+}
+
+#star {
+    background: url(../images/Star%20Filled-104.png) center center no-repeat;
+    opacity: 0.4;
+}
+
+#next {
+    background: url(../images/Next-Filled-104.png) center center no-repeat;
+}
+
+#speak {
+    background: url(../images/Speak-100.png) center center no-repeat;
+}
+
+.big_text {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.med_text {
+    font-size: 25px;
+}
+
+#main_a_en {
+    font-weight: 500;
+}
+
+#answer_readout {
+    color: white;
+    background: white;
+    display: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#answer_readout button.answer {
+    background-size: 100%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#hide_answer {
+    background: url(../images/Delete-104.png) center center no-repeat;
+    opacity: 0.4;
+}
+
+#speak_answer {
+    background: url(../images/Speak-100.png) center center no-repeat;
+    float: right;
+}
+
+#answer_readout hr {
+    margin: 5px 0;
+}
+
+#answer_readout #padding {
+    padding: 20px;
+}
+
+#answer_readout p {
+    display: none;
+}
+
+#answer_readout button {
+    width: 100%;
+    color: white;
+    font-weight: 500;
+}
+
+#answer_readout img {
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+#header_offset {
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.entry {
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: white url(../images/Star-Gold-Filled-104.png) no-repeat 130% 20px;
+    background-size: 19px;
+}
+
+.entry .number {
+    color: #338d59;
+    font-weight: 500;
+    text-align: left;
+    position: absolute;
+    margin: 0px;
+}
+
+.entry p {
+    margin-left: 45px;
+    margin-right: 20px;
+}
+
+.entry .q_en {
+    font-weight: 500;
+    color: black;
+    margin-bottom: 5px;
+    height: 19px;
+    overflow: hidden;
+}
+
+.entry .q_vn {
+    color: gray;
+    height: 19px;
+    overflow: hidden;
+}
+
+.entry .a_en, .entry .a_vn {
+    display: none;
+}
+
+#panel_wrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    display: none;
+}
+
+#panel {
+    background: white;
+    margin: 30px 10px 0;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6), 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: ;
+}
+
+#panel #close {;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background: url(../images/Delete-Black-104.png) center center no-repeat;
+    opacity: 0.4;
+    background-size: 100%;
+}
+
+#panel .med_text {
+    color: #338d59;
+}
+
+#panel .bold {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#panel .fade {
+    color: gray;
+}
+
+#panel #audio_test {
+    width: 100%;
+    background: #338d59;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+#audio_test img {
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+input[type=range] {
+    margin: 15px 0;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #338d59;
+    height: 22px;
+    width: 22px;
+    border-radius: 100px;
+    margin-top: -8px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgba(0, 0, 0, 0.1);
+    height: 5px;
+    border-radius: 100px;
+}
+
+#panel span {
+    text-align: center;
+    display: block;
+    margin: 15px 0;
+}
+
+input#speech_gender {
+    width: 50px;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+input#speech_gender::-webkit-slider-runnable-track {
+    background: rgba(0, 0, 0, 0.1);
+    height: 26px;
+    border-radius: 100px;
+    padding: 0 2px;
+}
+
+input#speech_gender::-webkit-slider-thumb {
+    margin-top: 2px;
+}
+
+#mobile_gender {
+    display: ;
+}
+
+
+#fast_scroll {
+    height: 40px;
+    margin: 20px 0 0;
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#filter {
+    width: 80px;
+    height: 40px;
+    background: url(../images/Filter-BG.png) center center no-repeat;
+    background-size: 100%;
+    z-index: 101;
+    margin-top: -40px;
+    z-index: 100;
+    position: relative;
+}
+
+#filter button{
+    height: 40px;
+    width: 75px;
+    background: url(../images/Star%20Filled-104.png) 45% center no-repeat;
+    background-size: 35%;
+    opacity: 0.4;
+    position: relative;
+    z-index: 100;
+}
+
+#filter button.inactive {
+    opacity: 0.4;
+}
+
+#slide {
+    height: 40px;
+    width: 6000px;
+    margin-left: 80px;
+    font-size: 0;
+}
+
+#slide div {
+    height: 40px;
+    width: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    line-height: 42px;
+}

@@ -1,0 +1,959 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
+        <meta name="format-detection" content="telephone=no" />
+        <title>One of US</title>
+        <link href="css/reset.css" type="text/css" rel="stylesheet">
+        <link href="css/main.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <div id="top_readout">
+            <!--<div id="status_bar"></div>-->
+            <div id="icon_tray">
+                <button id="settings"></button>
+                <button id="back"></button>
+                <button id="star"></button>
+                <button id="next"></button>
+                <button id="speak"></button>
+            </div>
+            <div id="fast_scroll">
+                <div id="slide">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+                    <div>13</div>
+                    <div>14</div>
+                    <div>15</div>
+                    <div>16</div>
+                    <div>17</div>
+                    <div>18</div>
+                    <div>19</div>
+                    <div>20</div>
+                    <div>21</div>
+                    <div>22</div>
+                    <div>23</div>
+                    <div>24</div>
+                    <div>25</div>
+                    <div>26</div>
+                    <div>27</div>
+                    <div>28</div>
+                    <div>29</div>
+                    <div>30</div>
+                    <div>31</div>
+                    <div>32</div>
+                    <div>33</div>
+                    <div>34</div>
+                    <div>35</div>
+                    <div>36</div>
+                    <div>37</div>
+                    <div>38</div>
+                    <div>39</div>
+                    <div>40</div>
+                    <div>41</div>
+                    <div>42</div>
+                    <div>43</div>
+                    <div>44</div>
+                    <div>45</div>
+                    <div>46</div>
+                    <div>47</div>
+                    <div>48</div>
+                    <div>49</div>
+                    <div>50</div>
+                    <!--<div>51</div>
+                    <div>52</div>
+                    <div>53</div>
+                    <div>54</div>
+                    <div>55</div>
+                    <div>56</div>
+                    <div>57</div>
+                    <div>58</div>
+                    <div>59</div>
+                    <div>60</div>
+                    <div>61</div>
+                    <div>62</div>
+                    <div>63</div>
+                    <div>64</div>
+                    <div>65</div>
+                    <div>66</div>
+                    <div>67</div>
+                    <div>68</div>
+                    <div>69</div>
+                    <div>70</div>
+                    <div>71</div>
+                    <div>72</div>
+                    <div>73</div>
+                    <div>74</div>
+                    <div>75</div>
+                    <div>76</div>
+                    <div>77</div>
+                    <div>78</div>
+                    <div>79</div>
+                    <div>80</div>
+                    <div>81</div>
+                    <div>82</div>
+                    <div>83</div>
+                    <div>84</div>
+                    <div>85</div>
+                    <div>86</div>
+                    <div>87</div>
+                    <div>88</div>
+                    <div>89</div>
+                    <div>90</div>
+                    <div>91</div>
+                    <div>92</div>
+                    <div>93</div>
+                    <div>94</div>
+                    <div>95</div>
+                    <div>96</div>
+                    <div>97</div>
+                    <div>98</div>
+                    <div>99</div>
+                    <div>100</div>-->
+                </div>
+            </div>
+            <div id="filter">
+                <button id="show_star" class="initial_state"></button>
+            </div>
+            <div id="padding">
+                <p id="main_q_en" class="big_text">Select a question below to start</p>
+                <hr>
+                <p id="main_q_vn">Lựa chọn một câu hỏi để bắt đầu</p>
+            </div>
+            
+            <p id="bg_number"></p>
+            
+            <div id="answer_readout">
+                <div id="padding">
+                    <button id="show_answer"><img src="images/Checked%20Checkbox%202-100.png"><br>Show answer / Xem câu trả lời</button>
+                    <button class="answer" id="hide_answer"></button>
+                    <button class="answer" id="speak_answer"></button>
+                    <p class="med_text answer" id="main_a_en"></p>
+                    <hr class="answer">
+                    <p class="subtitle answer" id="main_a_vn"></p>
+                </div>
+            </div>
+        </div>
+        <span id="header_offset">
+            
+            <div class="entry">
+                <p class="number">1</p>
+                <p class="q_en">What is the supreme law of the land?</p>
+                <p class="q_vn">Đạo luật tối thượng của đất nước Hoa Kỳ là gì?</p>
+                <p class="a_en">The Constitution</p>
+                <p class="a_vn">Bản Hiến Pháp</p>
+            </div>
+            <div class="entry">
+                <p class="number">2</p>
+                <p class="q_en">What does the Constitution do?</p>
+                <p class="q_vn">Hiến pháp để làm gì?</p>
+                <p class="a_en">Sets up the government</p>
+                <p class="a_vn">Thiết lập Chính Phủ</p>
+            </div>
+            <div class="entry">
+                <p class="number">3</p>
+                <p class="q_en">The idea of self-government is in the first three words of the Constitution. What are these words?</p>
+                <p class="q_vn">Ý tưởng tự trị được nêu lên trong 3 từ đầu tiên của bản Hiến Pháp. Ba từ này là gì?</p>
+                <p class="a_en">We the People</p>
+                <p class="a_vn">Chúng ta là Nhân Dân</p>
+            </div>
+            <div class="entry">
+                <p class="number">4</p>
+                <p class="q_en">What is an amendment?</p>
+                <p class="q_vn">Tu chính án là gì?</p>
+                <p class="a_en">A change to the Constitution</p>
+                <p class="a_vn">Một sự thay đổi trong Hiến Pháp</p>
+            </div>
+            <div class="entry">
+                <p class="number">5</p>
+                <p class="q_en">What do we call the first ten amendments to the Constitution?</p>
+                <p class="q_vn">Mười tu chính án đầu tiên của bản Hiến Pháp được gọi là gì?</p>
+                <p class="a_en">The Bill of Rights</p>
+                <p class="a_vn">Luật Dân Quyền</p>
+            </div>
+            <div class="entry">
+                <p class="number">6</p>
+                <p class="q_en">What is one right or freedom from the First Amendment?</p>
+                <p class="q_vn">Một trong những quyền tự do trong bản Tu Chính án Đầu Tiên là gì?</p>
+                <p class="a_en">Freedom of Religion</p>
+                <p class="a_vn">tự do tôn giáo</p>
+            </div>
+            <div class="entry">
+                <p class="number">7</p>
+                <p class="q_en">How many amendments does the Constitution have?</p>
+                <p class="q_vn">Bản Hiến Pháp có bao nhiêu tu chính án?</p>
+                <p class="a_en">27</p>
+                <p class="a_vn">27</p>
+            </div>
+            <div class="entry">
+                <p class="number">8</p>
+                <p class="q_en">What did the Declaration of Independence do?</p>
+                <p class="q_vn">Bản Tuyên Ngôn Độc Lập nói gì?</p>
+                <p class="a_en">Declared our independence from Great Britain</p>
+                <p class="a_vn">Tuyên ngôn nền độc lập khỏi Anh Quốc</p>
+            </div>
+            <div class="entry">
+                <p class="number">9</p>
+                <p class="q_en">What are two rights in the Declaration of Independence?</p>
+                <p class="q_vn">Nêu hai quyền trong bản Tuyên Ngôn Độc Lập</p>
+                <p class="a_en">Life & Liberty</p>
+                <p class="a_vn">Quyền sống & Quyền tự do</p>
+            </div>
+            <div class="entry">
+                <p class="number">10</p>
+                <p class="q_en">What is freedom of religion?</p>
+                <p class="q_vn">Tự do tôn giáo là gì?</p>
+                <p class="a_en">You can practice any religion or none at all</p>
+                <p class="a_vn">Bạn có thể theo bất cứ tôn giáo nào hoặc không theo tôn giáo nào hết</p>
+            </div>
+            <div class="entry">
+                <p class="number">11</p>
+                <p class="q_en">What is the economic system in the United States?</p>
+                <p class="q_vn">Hệ thống kinh tế của Hoa Kỳ là gì?</p>
+                <p class="a_en">Market economy</p>
+                <p class="a_vn">Kinh tế thị trường</p>
+            </div>
+            <div class="entry">
+                <p class="number">12</p>
+                <p class="q_en">What is the "rule of law"?</p>
+                <p class="q_vn">"Quy tắc của luật pháp" là gì?</p>
+                <p class="a_en">Everyone must follow the law</p>
+                <p class="a_vn">Mọi người đều phải tuân theo luật pháp</p>
+            </div>
+            <div class="entry">
+                <p class="number">13</p>
+                <p class="q_en">Name one branch or part of the government</p>
+                <p class="q_vn">Nêu tên một nhánh hoặc bộ phận trong chính phủ Hoa Kỳ</p>
+                <p class="a_en">Congress</p>
+                <p class="a_vn">Quốc Hội</p>
+            </div>
+            <div class="entry">
+                <p class="number">14</p>
+                <p class="q_en">What stops one branch of government from becoming too powerful?</p>
+                <p class="q_vn">Cái gì ngăn cản không cho một nhánh chính phủ có quá nhiều quyền lực?</p>
+                <p class="a_en">Checks and balances</p>
+                <p class="a_vn">Kiểm soát lẫn nhau</p>
+            </div>
+            <div class="entry">
+                <p class="number">15</p>
+                <p class="q_en">Who is in charge of the executive branch?</p>
+                <p class="q_vn">Ai đứng đầu nhánh hành pháp?</p>
+                <p class="a_en">The President</p>
+                <p class="a_vn">Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">16</p>
+                <p class="q_en">Who makes federal law?</p>
+                <p class="q_vn">Ai làm ra luật lệ liên bang?</p>
+                <p class="a_en">Congress</p>
+                <p class="a_vn">Quốc Hội</p>
+            </div>
+            <div class="entry">
+                <p class="number">17</p>
+                <p class="q_en">What are the two parts of the US Congress?</p>
+                <p class="q_vn">Hai bộ phận của Quốc Hội Hoa Kỳ là gì?</p>
+                <p class="a_en">Senate and House of Representatives</p>
+                <p class="a_vn">Thượng Viện và Hạ Viện</p>
+            </div>
+            <div class="entry">
+                <p class="number">18</p>
+                <p class="q_en">How many US Senators are there?</p>
+                <p class="q_vn">Hoa Kỳ có bao nhiêu Thượng Nghị Sĩ?</p>
+                <p class="a_en">100</p>
+                <p class="a_vn">100</p>
+            </div>
+            <div class="entry">
+                <p class="number">19</p>
+                <p class="q_en">We elect a US Senator for how many years?</p>
+                <p class="q_vn">Một Thượng Nghị Sĩ được bầu phục vụ bao nhiêu năm?</p>
+                <p class="a_en">6</p>
+                <p class="a_vn">6</p>
+            </div>
+            <div class="entry">
+                <p class="number">20</p>
+                <p class="q_en">Who is one of your state's US Senators now?</p>
+                <p class="q_vn">Ai là một trong những Thượng Nghị Sĩ Liên Bang của bạn?</p>
+                <p class="a_en">Thom Tillis (North Carolina)</p>
+                <p class="a_vn">Thom Tillis (North Carolina)</p>
+            </div>
+            <div class="entry">
+                <p class="number">21</p>
+                <p class="q_en">The House of Representatives has how many voting members?</p>
+                <p class="q_vn">Hạ Viện có bao nhiêu dân biểu?</p>
+                <p class="a_en">435</p>
+                <p class="a_vn">435</p>
+            </div>
+            <div class="entry">
+                <p class="number">22</p>
+                <p class="q_en">We elect a US Representatives for how many years?</p>
+                <p class="q_vn">Chúng ta bầu Dân Biểu cho mấy năm?</p>
+                <p class="a_en">2</p>
+                <p class="a_vn">2</p>
+            </div>
+            <div class="entry">
+                <p class="number">23</p>
+                <p class="q_en">Name your US Representative</p>
+                <p class="q_vn">Nêu tên Dân Biểu của bạn</p>
+                <p class="a_en">Robert Pittenger (9th District)</p>
+                <p class="a_vn">Robert Pittenger (Khu Vực 9)</p>
+            </div>
+            <div class="entry">
+                <p class="number">24</p>
+                <p class="q_en">Who does a US Senator represent?</p>
+                <p class="q_vn">Thượng Nghị Sĩ đại diện ai?</p>
+                <p class="a_en">All people of the state</p>
+                <p class="a_vn">Tất cả người dân trong tiểu bang</p>
+            </div>
+            <div class="entry">
+                <p class="number">25</p>
+                <p class="q_en">Why do some states have more Representatives than other states?</p>
+                <p class="q_vn">Tại sao có những tiểu bang có nhiều Đại Biểu hơn các tiểu bang khác?</p>
+                <p class="a_en">Because some states have more people</p>
+                <p class="a_vn">Vì một số tiểu bang đông dân hơn</p>
+            </div>
+            <div class="entry">
+                <p class="number">26</p>
+                <p class="q_en">We elect a president for how many years?</p>
+                <p class="q_vn">Chúng ta bầu Tổng Thống cho mấy năm?</p>
+                <p class="a_en">4</p>
+                <p class="a_vn">4</p>
+            </div>
+            <div class="entry">
+                <p class="number">27</p>
+                <p class="q_en">In what month do we vote for President?</p>
+                <p class="q_vn">Chúng ta bầu Tổng Thống vào tháng nào?</p>
+                <p class="a_en">November</p>
+                <p class="a_vn">Tháng Mười Một</p>
+            </div>
+            <div class="entry">
+                <p class="number">28</p>
+                <p class="q_en">What is the name of the President of the United States now?</p>
+                <p class="q_vn">Hiện nay tên Tổng Thống Hoa Kỳ là gì?</p>
+                <p class="a_en">Barack Obama</p>
+                <p class="a_vn">Barack Obama</p>
+            </div>
+            <div class="entry">
+                <p class="number">29</p>
+                <p class="q_en">What is the name of the Vice President of the United States now?</p>
+                <p class="q_vn">Hiện nay tên Phó Tổng Thống Hoa Kỳ là gì</p>
+                <p class="a_en">Joe Biden</p>
+                <p class="a_vn">Joe Biden</p>
+            </div>
+            <div class="entry">
+                <p class="number">30</p>
+                <p class="q_en">If the President can no longer serve, who becomes President?</p>
+                <p class="q_vn">Nếu Tổng Thống không còn làm việc được nữa, ai sẽ thay thế làm Tổng Thống?</p>
+                <p class="a_en">The Vice President</p>
+                <p class="a_vn">Phó Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">31</p>
+                <p class="q_en">If both the President and the Vice President can no longer serve, who becomes President?</p>
+                <p class="q_vn">Nếu cả Tổng Thống và Phó Tổng Thống không còn làm việc được nữa, ai sẽ thay thế làm Tổng Thống?</p>
+                <p class="a_en">The Speaker of the House</p>
+                <p class="a_vn">Chủ Tịch Hạ Nghị Viện</p>
+            </div>
+            <div class="entry">
+                <p class="number">32</p>
+                <p class="q_en">Who is the Commander in Chief of the military?</p>
+                <p class="q_vn">Ai là Tổng Tư Lệnh quân đội?</p>
+                <p class="a_en">The President</p>
+                <p class="a_vn">Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">33</p>
+                <p class="q_en">Who signs bills to become laws?</p>
+                <p class="q_vn">Ai sẽ ký dự thảo luật thành luật?</p>
+                <p class="a_en">The President</p>
+                <p class="a_vn">Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">34</p>
+                <p class="q_en">Who vetoes bills?</p>
+                <p class="q_vn">Ai có quyền từ chối các dự luật?</p>
+                <p class="a_en">The President</p>
+                <p class="a_vn">Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">35</p>
+                <p class="q_en">What does the President's Cabinet do?</p>
+                <p class="q_vn">Nội các của Tổng Thống làm gì?</p>
+                <p class="a_en">Advices the President</p>
+                <p class="a_vn">Cố vấn cho Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">36</p>
+                <p class="q_en">What are two cabinet level positions?</p>
+                <p class="q_vn">Hai chức vụ trong hàng nội các là gì?</p>
+                <p class="a_en">Secretary of Education & Vice President</p>
+                <p class="a_vn">Bộ Trưởng Giáo Dục & Phó Tổng Thống</p>
+            </div>
+            <div class="entry">
+                <p class="number">37</p>
+                <p class="q_en">What does the judicial branch do?</p>
+                <p class="q_vn">Ngành tư pháp làm gì?</p>
+                <p class="a_en">Resolves disputes</p>
+                <p class="a_vn">Giải quyết tranh cãi</p>
+            </div>
+            <div class="entry">
+                <p class="number">38</p>
+                <p class="q_en">What is the highest court in the United States?</p>
+                <p class="q_vn">Tòa án cao nhất ở Hoa Kỳ là gì?</p>
+                <p class="a_en">The Supreme Court</p>
+                <p class="a_vn">Tòa Án Tối Cao</p>
+            </div>
+            <div class="entry">
+                <p class="number">39</p>
+                <p class="q_en">How many justices are on the Supreme Court?</p>
+                <p class="q_vn">Có bao nhiêu thẩm phán ở Tòa Án Tối Cao?</p>
+                <p class="a_en">9</p>
+                <p class="a_vn">9</p>
+            </div>
+            <div class="entry">
+                <p class="number">40</p>
+                <p class="q_en">Who is the Chief Justice of the United States now?</p>
+                <p class="q_vn">Ai đang là Chủ Tịch Tòa Án Tối Cao?</p>
+                <p class="a_en">John Roberts</p>
+                <p class="a_vn">John Roberts</p>
+            </div>
+            <div class="entry">
+                <p class="number">41</p>
+                <p class="q_en">Under our Constitution, some powers belong to the federal government. What is one power of the federal government?</p>
+                <p class="q_vn">Theo Hiến Pháp, chính phủ liên bang có một số quyền. Một trong những quyền này là gì?</p>
+                <p class="a_en">Print money</p>
+                <p class="a_vn">In tiền</p>
+            </div>
+            <div class="entry">
+                <p class="number">42</p>
+                <p class="q_en">Under our Constitution, some powers belong to the states. What is one power of the states?</p>
+                <p class="q_vn">Theo Hiến Pháp, các tiểu bang có một số quyền. Một trong những quyền này là gì?</p>
+                <p class="a_en">Give a driver’s license</p>
+                <p class="a_vn">Cấp bằng lái xe</p>
+            </div>
+            <div class="entry">
+                <p class="number">43</p>
+                <p class="q_en">Who is the Governor of your state now?</p>
+                <p class="q_vn">Thống Đốc tiểu bang của bạn tên gì?</p>
+                <p class="a_en">Pat McCrory (North Carolina)</p>
+                <p class="a_vn">Pat McCrory (North Carolina)</p>
+            </div>
+            <div class="entry">
+                <p class="number">44</p>
+                <p class="q_en">What is the capital of your state?</p>
+                <p class="q_vn">Thủ đô của tiểu bang bạn tên gì?</p>
+                <p class="a_en">Raleigh</p>
+                <p class="a_vn">Raleigh</p>
+            </div>
+            <div class="entry">
+                <p class="number">45</p>
+                <p class="q_en">What are the two major political parties in the United States?</p>
+                <p class="q_vn">Hai đảng chính của Hoa Kỳ là gì?</p>
+                <p class="a_en">Democratic and Republican</p>
+                <p class="a_vn">Dân Chủ và Cộng Hòa</p>
+            </div>
+            <div class="entry">
+                <p class="number">46</p>
+                <p class="q_en">What is the political party of the President now?</p>
+                <p class="q_vn">Đảng của Tổng Thống hiện tại là đảng nào?</p>
+                <p class="a_en">Democratic (Barack Obama)</p>
+                <p class="a_vn">Dân Chủ (Barack Obama)</p>
+            </div>
+            <div class="entry">
+                <p class="number">47</p>
+                <p class="q_en">What is the name of the Speaker of the House of Representatives now?</p>
+                <p class="q_vn">Chủ Tịch Hạ Viện hiện thời tên gì?</p>
+                <p class="a_en">Paul Ryan</p>
+                <p class="a_vn">Paul Ryan</p>
+            </div>
+            <div class="entry">
+                <p class="number">48</p>
+                <p class="q_en">There are four amendments to the Constitution about who can vote. Describe one of them</p>
+                <p class="q_vn">Có bốn tu chính án Hiến Pháp về việc ai có quyền bầu cử. Kể ra Một trong các thứ đó</p>
+                <p class="a_en">Citizens 18 and older can vote</p>
+                <p class="a_vn">Công dân 18 tuổi và hơn được đi bầu</p>
+            </div>
+            <div class="entry">
+                <p class="number">49</p>
+                <p class="q_en">What is one responsibility that is only for United States citizens?</p>
+                <p class="q_vn">Một trong các bổn phận chỉ dành riêng cho công dân Hoa Kỳ là gì?</p>
+                <p class="a_en">Vote</p>
+                <p class="a_vn">Đi bầu</p>
+            </div>
+            <div class="entry">
+                <p class="number">50</p>
+                <p class="q_en">Name one right only for United States citizens</p>
+                <p class="q_vn">Cho biết một quyền chỉ dành riêng cho công dân Hoa Kỳ</p>
+                <p class="a_en">Vote</p>
+                <p class="a_vn">Đi bầu</p>
+            </div>
+            <!--<div class="entry">
+                <p class="number">51</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">52</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">53</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">54</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">55</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">56</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">57</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">58</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">59</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">60</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">61</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">62</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">63</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">64</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">65</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">66</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">67</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">68</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">69</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">70</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">1</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">2</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">3</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">4</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">5</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">6</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">7</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">8</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">9</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">0</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">1</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">2</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">3</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">4</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">5</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">6</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">7</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">8</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">9</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">0</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">1</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">2</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">3</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">4</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">5</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">6</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">7</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">8</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">9</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">0</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">1</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">2</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">3</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">4</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">5</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">6</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">7</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">8</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">9</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>
+            <div class="entry">
+                <p class="number">0</p>
+                <p class="q_en"></p>
+                <p class="q_vn"></p>
+                <p class="a_en"></p>
+                <p class="a_vn"></p>
+            </div>-->
+        </span>
+        
+        <div id="panel_wrapper">
+            <div id="panel">
+                <button id="close"></button>
+                <p class="med_text right">Speech settings</p>
+                <br>
+                <br>
+                <p class="bold inline">Speech rate</p>
+                <p class="fade right inline">Tốc độ phát âm</p>
+                <input id="speech_rate" type="range" min="0" max="2" step="0.1" value="1">
+                <br>
+                <br>
+                <p class="bold inline">Speech volume</p>
+                <p class="fade right inline">Âm lượng</p>
+                <input id="speech_volume" type="range" min="0" max="1" step="0.1" value="1">
+                <div id="mobile_gender">
+                    <br>
+                    <br>
+                    <p class="bold inline">Gender</p>
+                    <p class="fade right inline">Giới tính</p>
+                    <span>
+                        <p class="inline fade">Male / Nam</p><input id="speech_gender" type="range" min="0" max="1" step="1" value="1"><p class="inline fade">Female / Nữ</p>
+                    </span>
+                </div>
+                <br>
+                <br>
+                
+                <button id="audio_test">Test sound / Thử âm thanh <img src="images/Speak-100.png"></button>
+            </div>
+        </div>
+        
+        <script src="scripts/jquery-1.12.3.min.js"></script>
+        <script src="scripts/fastclick.js"></script>
+        <script src="scripts/script.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
